@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int primos(int x) {
+  int num, divisores = 0;
+  
+  for(num = 1; num <= x; num++) {
+    if(x % num == 0) {
+      divisores++;
+    }
+  }
+  if(divisores == 2) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+int main() {
+  int N, n_primos = 0;
+  
+  for(N = 100; N <= 1000; N++) {
+    if(primos(N) == 1) {
+      printf("%d\n", N);
+      n_primos++;
+    }
+    if(n_primos == 3) {
+      break;
+    }
+  }
+  return 0;
+}
