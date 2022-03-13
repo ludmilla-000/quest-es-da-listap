@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+#define PI 3.14
+
+float calcularvolume(float r) {
+    float volume = 4/3 * (PI*pow(r,3));
+    return volume;
+}
+
+int main(){
+    float Raio, Resultado;
+
+    printf("Digite o raio da esfera:");
+    scanf("%f",&Raio);
+
+    Resultado = calcularvolume(Raio);
+
+    printf("O volume da esfera é:%.3f\n",Resultado);
+
+    return 0;
+}
